@@ -4,15 +4,12 @@
     "json_class": "Chef::Role",
     "default_attributes": {
         "postgresql": {
-            "password": { 
-                "postgres": "postgres"
-            }
+            "password": {"postgres":"postgres"}
         }
     },
-    "description": "The base role for systems that serve HTTP traffic",
+    "description": "Install PostgreSQL ",
     "run_list": [
         "recipe[postgresql::server]",
-        "recipe[postgresql::server_debian]",
-        "recipe[postgis]"
+        "recipe[postgresql::server_debian]"
     ]
 }
